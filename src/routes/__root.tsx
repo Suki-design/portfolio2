@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AuroraField } from "../components/AuroraField";
 import { SiteNav } from "../components/SiteNav";
+import Clarity from "@microsoft/clarity";
 
 function NotFoundComponent() {
   return (
@@ -146,8 +147,14 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    const projectId = "yayab2bzwy";
+    Clarity.init(projectId);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
