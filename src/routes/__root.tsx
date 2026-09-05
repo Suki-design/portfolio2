@@ -109,6 +109,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         property: "og:description",
         content:
           "Product work, case studies and writing by Favour Sukat, a data native product manager and AI builder.",
+      },{
+        property: "og:image",
+        content:
+          "https://api.microlink.io?url=https%3A%2F%2Ffavoursukat.com&screenshot=true&meta=false&embed=screenshot.url",
       },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -153,6 +157,7 @@ function RootComponent() {
 
   useEffect(() => {
     const projectId = "yayab2bzwy";
+    console.log("clarity init", projectId)
     Clarity.init(projectId);
   }, []);
 
