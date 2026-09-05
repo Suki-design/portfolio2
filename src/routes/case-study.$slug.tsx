@@ -184,7 +184,7 @@ function CaseStudyPage() {
           )}
         </div>
         <Link
-          to="/"
+          to="/case-studies"
           hash="work"
           className="text-xs tracking-widest text-muted-foreground uppercase"
         >
